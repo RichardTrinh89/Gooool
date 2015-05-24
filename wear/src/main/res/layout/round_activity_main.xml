@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" tools:context=".MainActivity" tools:deviceIds="wear_round">
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:layout_alignBottom="@+id/imageButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:id="@+id/txtHomeScore"
+        android:layout_above="@+id/chronometer"
+        android:layout_toStartOf="@+id/textClock"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:id="@+id/txtGuestScore"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/imageButton2"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton"
+        android:src="@drawable/soccer_ball"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_above="@+id/txtHomeScore"
+        android:layout_alignParentStart="true"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageButton2"
+        android:src="@drawable/soccer_ball"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_above="@+id/txtGuestScore"
+        android:layout_toEndOf="@+id/textClock"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/homeScore"
+        android:layout_below="@+id/txtHomeScore"
+        android:layout_toStartOf="@+id/textClock"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:id="@+id/guestScore"
+        android:layout_below="@+id/txtGuestScore"
+        android:layout_alignEnd="@+id/lblGuest"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Home"
+        android:id="@+id/lblHome"
+        android:layout_below="@+id/chronometer"
+        android:layout_alignLeft="@+id/txtHomeScore"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Guest"
+        android:id="@+id/lblGuest"
+        android:layout_below="@+id/chronometer"
+        android:layout_alignLeft="@+id/txtGuestScore"/>
+
+    <Chronometer
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chronometer"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/txtGuestScore"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>
